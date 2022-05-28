@@ -4,8 +4,9 @@
     "type": "library",
     "require": {
         "php": ">=7.4.0",
-        "illuminate/database": "^6.20",
-        "illuminate/support": "^6.20"
+        "illuminate/config": "^9.0",
+        "illuminate/database": "^9.0",
+        "illuminate/support": "^9.0"
     },
     "license": "MIT",
     "authors": [
