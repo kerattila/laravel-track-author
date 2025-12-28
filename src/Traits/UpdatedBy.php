@@ -42,6 +42,8 @@ trait UpdatedBy
     private function setUpdatedBy()
     {
         $column = config('track-author.columns.updatedByColumnName');
-        $this->$column = Auth::id();
+        if (is_null($this->$column)) {
+            $this->$column = Auth::id();
+        }
     }
 }

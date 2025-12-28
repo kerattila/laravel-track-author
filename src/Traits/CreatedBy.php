@@ -38,6 +38,8 @@ trait CreatedBy
     private function setCreatedBy()
     {
         $column = config('track-author.columns.createdByColumnName');
-        $this->$column = Auth::id();
+        if (is_null($this->$column)) {
+            $this->$column = Auth::id();
+        }
     }
 }
